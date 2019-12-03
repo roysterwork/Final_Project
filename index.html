@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <br>
+    <br>
+
+    <main>
+
+
+    <div class="container2">
+      <img src="images/Bout.jpg" alt="logo" id="Banner" >
+      <br>
+      <br>
+
+
+
+  	     <!-- <figure>
+  	        <video id="myVideo">
+  		          <source src="UFC 216_ Inside the Octagon_ Ferguson vs Lee.mp4" type="video/ogg" />
+
+  	        </video>
+  	<figcaption>The Top 20 Greatest UFC Fightrs</figcaption>
+        </figure> -->
+        <iframe width="560" height="315" id="myVideo" src="https://www.youtube.com/embed/8kY40WKIcVc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <br>
+
+        <!-- <button onclick="playVid()" class="thishere" type="button">Play</button>
+        <br>
+        <button onclick="pauseVid()" class="thishere" type="button">Pause</button><br>
+ -->
+
+
+
+    </div>
+
+
+
+  	<br/>
+
+
+
+
+  	<script>
+  		// You may only change code in the script tag.
+  		// You can not change the HTML in the file.
+
+
+  	function playVid() {
+  		var vid = document.getElementById("myVideo");
+  		// Name variable and select object as variable
+  		vid.play();
+  		// Use method to make variable have action
+  		console.log("Play Video")
+  		// Play the video and update the volume.
+  	}
+
+  	function pauseVid() {
+  		var vid = document.getElementById("myVideo");
+  		vid.pause();
+  		// Use method to make variable have action
+  		console.log("Pause Video")
+  	  	// Play the video.
+  	}
+
+  	function slowSpeed() {
+  		var vid = document.getElementById("myVideo");
+  		vid.playbackRate = 0.5;
+  		// Slow the vido speed by half and log the new rate to the console.
+  	}
+
+  	function increaseSpeed() {
+  				var vid = document.getElementById("myVideo");
+  				vid.playbackRate = 2;
+
+  		// Double the video speen and log the new rate to the console.
+  	}
+
+  	function mute() {
+
+  			if (document.getElementById("mute").innerHTML=== "mute") {
+
+  			var vid = document.getElementById("myVideo");
+  		  vid.muted = true;
+  			// vid.innerHTML="unmute";
+  			document.getElementById("mute").innerHTML= "unmute";
+  			console.log("mute");
+  			// check console to see if it worked //
+  		}
+
+  		else {
+
+  			var vid = document.getElementById("myVideo");
+  		  vid.muted = false;
+  			// vid.innerHTML="unmute";
+  			document.getElementById("mute").innerHTML= "mute";
+  			console.log("unmute");
+
+  		}
+  			// console.log("unmute");
+  		// console.log("unmute");
+  		// If the video is currently muted:
+  		// 		log "unmute" to the console
+  		// 		unmute the video
+  		// 		change the button text to "mute"
+  		// If the video is currently unmuted:
+  	 	//		log "mute" to the console
+  		// 		mute the video
+  		// 		change the button text to "unmute"
+  	}
+
+  	volumeSlider.oninput = function() {
+  		var slider = document.getElementById("volumeSlider");
+  		// creates variable slider has #volumeSlider // ID
+
+      var output = document.getElementById("volume");
+  		// creates variable output as volume id
+  		output.innerHTML = this.value;
+
+
+  		var vid = document.getElementById("myVideo");
+
+  		vid.volume= (this.value / 100) ;
+  		console.log(this.value);
+  // 		slider.oninput = function() {
+  //
+  //     output.innerHTML = this.value;
+  // 		slider.value = document.getElementById("volume").;
+  //
+  // }
+  		// var vid = document.getElementById("myVideo");
+  		// document.getElementById("volumeSlider").innerHTML= "mute";
+
+
+  		// Change the volume (0 is off, 100 is full volume, everything else is proportionally in between)
+
+  		// Make sure to update the volume element.
+
+  		// Update the console log with the new volume as well.
+  	}
+
+
+  	function gray() {
+
+  		document.getElementById("myVideo").style.filter = "grayscale(100%)";
+  		console.log("In grayscale")
+  		// Utilize the existing grayscale class.
+
+  	}
+
+  	function color() {
+  		document.getElementById("myVideo").style.filter = "grayscale(0%)";
+  		console.log("In color")
+  		// Remove the existing grayscale class.
+
+  	}
+
+  	// Not sure if we can test for this???
+  	function random(){
+
+
+  		// Final greycale worked with random!
+  		 var declaration = document.getElementById("myVideo").style;
+  		 var grayish = Math.floor(Math.random() * 101)
+   		 var setprop = declaration.setProperty("filter","grayscale( " + grayish + "%)");
+  		 console.log("greysale is at " + grayish + "%")
+
+  		 // skewing the video
+  		 var declaration = document.getElementById("myVideo").style;
+  		 var randX = Math.floor(Math.random() * 101)
+  		 var randY = Math.floor(Math.random() * 101)
+  		 var setprop = declaration.setProperty("transform","skewY(" + randY +"deg)");
+  		 var setprop = declaration.setProperty("transform","skewX(" + randX +"deg)");
+  		  // document.getElementById("myDIV").style.transform = "rotate(20deg)";
+  			console.log("X axis skewed " + randX + " degrees")
+  			console.log("Y axis skewed " + randY + " degrees")
+  		// Use setProperty to change the grayscale filder and transform properties of the video.
+  		// Log what the new values are to the console.
+  	}
+
+  	</script>
+
+
+
+
+
+
+    <h1>Fighter Stats</h1>
+<div class='tableauPlaceholder' id='viz1575336092495' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;UF&#47;UFCpractice6&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='UFCpractice6&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;UF&#47;UFCpractice6&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1575336092495');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1120px';vizElement.style.minHeight='1027px';vizElement.style.maxHeight='2027px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1120px';vizElement.style.minHeight='1027px';vizElement.style.maxHeight='2027px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='927px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+      <div class="container">
+
+      <img src="images/Brock.jpeg" alt="logo" id="flyer"/>
+      <img src="images/Jones.jpeg" alt="logo" id="brochure"/>
+      <img src="images/Cody.jpeg" alt="logo" id="wireframe"/>
+
+      <img src="images/Connor.jpg" alt="logo" id="code"/>
+      <img src="images/Holly.jpeg" alt="logo" id="website" class="rotate"/>
+      <img src="images/Robert.jpeg" alt="logo" id="publication"/>
+
+      <img src="images/Stipe.jpeg" alt="logo" id="logo"/>
+      <img src="images/Rock.jpeg" alt="logo" id="sketch"/>
+      <img src="images/Adesanya.jpeg" alt="logo" id="resume"/>
+    </div>
+    <br>
+    <footer class=foot>
+      <p> &copy; Will Royster, UFC Data Vizualization</p>
+    </footer>
+  </body>
+
+
+
+
+
+</html>
